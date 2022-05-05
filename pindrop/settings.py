@@ -133,3 +133,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # LOGOUT_REDIRECT_URL = "users:sign-in"
 
 BASE_COUNTRY = "USA"
+
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())
