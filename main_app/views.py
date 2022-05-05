@@ -51,7 +51,7 @@ class EventCreate(LoginRequiredMixin, CreateView):
 
 class EventUpdate(UpdateView):
   model = Event
-  fields = ['name', 'location', 'event_time', 'time_created', 'details',]
+  fields = ['name', 'location', 'event_time', 'event_date', 'details',]
 
   #   '__all__'
   def form_valid(self, form):
