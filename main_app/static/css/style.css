@@ -7,10 +7,13 @@ color: rgb(255, 153, 0);
 background-color: rgb(51, 51, 51);
 }
 body {
-    background-color: hsl(175, 10%, 23%);
+    background-color: rgb(51, 51, 51);
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+  }
+  h1 {
+    color:rgb(255, 153, 0);
   }
  .page-footer{
    background-color: rgb(250, 235, 215);
@@ -34,9 +37,8 @@ main {
 
 #map {
     height: 100vh;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
+    width: 100vw;
+    position:fixed;
   }
 .card{
   color: rgb(255, 153, 0);
@@ -59,4 +61,25 @@ color: aliceblue;
     padding: 0;
     flex-direction: column;
     align-items: center;
+}
+.card {
+  background-color: #ddcebf;
+}
+.card .card-content .card-title {
+  display: block;
+  line-height: 32px;
+  margin-bottom:8px;
+  color: #2f2535;
+}
+.card .card-content p {
+color:#2f2535;
+font-size: 3vh;
+}
+.fixed {
+  position:fixed;
+  top:0;
+  left: 0;
+}
+.spacer{
+  height: 100vh;
 }

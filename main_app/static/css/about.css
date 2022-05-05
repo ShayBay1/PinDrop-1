@@ -1,0 +1,105 @@
+body {
+    background-color: #fbfafa;
+
+}
+h1 {
+    text-align: center;
+    font-size: 100px;
+    background-color: #e2e2e2;
+}
+
+h2 {
+    padding-top: 0%;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.image1 {
+    width: 100%;
+    background-image: url(https://files.realpython.com/media/Screenshot_2018-12-09_at_17.58.16.20be0c5d3f1e.png);
+    height: 50vh;
+    background-color: purple;
+    background-position: center;
+}
+
+.aboutp {
+    font-size: 30px;
+    text-indent: 50px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.row {
+    font-size: 30px;
+    text-indent: 50px;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.row {
+    display: flex;
+}
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+.section-bottom {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.section-top {
+    background-color: #e2e2e2;
+}
+
+.section-middle {
+    background-color: #e2e2e2;
+}
+.section-bottom {
+   background-color: white;
+
+}
+
+
+/* ------Header and footer------ */
+
+.nav-wrapper {
+    background-color:rgb(51, 51, 51);
+}
+.right {
+  font-weight: lighter;
+}
+
+.left.brand-logo {
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 153, 0);
+}
+.right {
+    padding-bottom: 10px;
+    color: black;
+}
+
+.page-footer {
+    background-color:#e2e2e2;
+    font-weight: bold;
+}
