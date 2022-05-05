@@ -1,5 +1,5 @@
 from django.forms import DateTimeField, DateTimeInput
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core import serializers
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Event
