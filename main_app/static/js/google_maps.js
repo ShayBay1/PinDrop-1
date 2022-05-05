@@ -59,7 +59,7 @@ function initMap(marks) {
     const veniceBeach = { lat: 34.003052, lng: -118.483971 };
     // The map, center it on Venice Beach for now, later this will be user's home
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
+      zoom: 12,
       center: veniceBeach,
     });
     // make markers
