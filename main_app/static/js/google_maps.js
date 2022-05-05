@@ -1,19 +1,21 @@
-function getCookie(name) {
-  let cookieValue = null;
-  if (document.cookie && document.cookie !== '') {
-      const cookies = document.cookie.split(';');
-      for (let i = 0; i < cookies.length; i++) {
-          const cookie = cookies[i].trim();
-          // Does this cookie string begin with the name we want?
-          if (cookie.substring(0, name.length + 1) === (name + '=')) {
-              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-              break;
-          }
-      }
-  }
-  return cookieValue;
-}
-const csrftoken = getCookie('csrftoken');
+var markerBucket = {};
+
+$(document).ready(function() {
+  let cardList = $('.card-content');
+  cardList = [...cardList];
+  cardList.forEach((card) => {
+    let cardId = card.id
+    console.log('poop', cardId)
+    card.addEventListener('click', () => {
+      console.log(markerBucket[cardId]);
+      markerBucket[cardId][1].open({
+        anchor: markerBucket[cardId][0],
+        map,
+        shouldFocus: true,
+      });
+    })
+  })
+});
 
 function formatMarkers(marks) {
   let markDict = marks.split('}{')
@@ -70,7 +72,9 @@ function initMap(marks) {
           position: {lat: parseFloat(markerIngredients.lat), lng: parseFloat(markerIngredients.lng)},
           map: map,
         });
-  
+        
+        
+
         // reference for markerIngredients vv
         // id: '15
         // user: '2'
@@ -91,6 +95,8 @@ function initMap(marks) {
           <p>details: ${ markerIngredients.details }</p>
           <a href="/events/${markerIngredients.id}/update">Edit</a>`
         })
+        
+        markerBucket[markerIngredients.id] = [marker, infoWindow];
         
   
         marker.addListener('mouseup', (event) => {

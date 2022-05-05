@@ -11,9 +11,9 @@ class="logged-in"
 <h1>Event List</h1>
 
 {% for event in events %}
-<a href="{% url 'detail' event.id %}">
+<a href="#page-top">
 <div class="card">    
-    <div class="card-content">
+    <div id='{{ event.id }}'class="card-content">
         <span class="card-title">{{ event.name }}</span>
         <p>location: {{ event.location }}</p>
         <p>event_time: {{ event.event_time }}</p>
