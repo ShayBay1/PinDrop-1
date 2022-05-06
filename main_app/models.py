@@ -7,6 +7,18 @@ from datetime import time
 # class User(models.Model):
 #     name = models.CharField(max_length=100)
 
+EVENT_TYPE_CHOICES = (
+    ('Meet Up', 'meet up'),
+    ('Party', 'party'),
+    ('Music', 'music'),
+    ('Community', 'community'),
+    ('Professional', 'professional'),
+    ('Social', 'social'),
+    ('Sport', 'sport'),
+    ('Lifestyle', 'lifestyle'),
+    ('Religious', 'religious'),
+)
+
 class Event(models.Model):
     name = models.CharField(max_length=101)
     location = models.CharField(max_length=300)
@@ -16,6 +28,7 @@ class Event(models.Model):
     event_date = models.DateField(null=True)
     time_created = models.TimeField(null=True)
     date_created = models.DateField(null=True)
+    event_type = models.CharField(max_length=30, choices=EVENT_TYPE_CHOICES, default=EVENT_TYPE_CHOICES[0])
     details = models.CharField(max_length=1000)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     fields = ['event_date', 'event_time']

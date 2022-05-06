@@ -1,8 +1,9 @@
 from django.forms import DateTimeField, DateTimeInput
 from django.shortcuts import render, redirect
 from django.core import serializers
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView, ModelFormMixin
 from .models import Event
+from .forms import EventForm
 import json
 # Create your views here.
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
@@ -32,7 +33,8 @@ def events_detail(request, event_id):
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
-    fields = ['name', 'location', 'event_time', 'event_date', 'details',]
+    # form = EventForm
+    fields = ['name', 'location', 'event_time', 'event_date', 'details', 'event_type']
 #   '__all__'
     success_url = '/events/'
 
@@ -51,7 +53,9 @@ class EventCreate(LoginRequiredMixin, CreateView):
 
 class EventUpdate(UpdateView):
   model = Event
-  fields = ['name', 'location', 'event_time', 'event_date', 'details',]
+#   fields = ['name', 'location', 'event_time', 'event_date', 'details', 'event_type']
+
+  form_class = EventForm
 
   #   '__all__'
   def form_valid(self, form):
@@ -63,16 +67,16 @@ class EventDelete(LoginRequiredMixin, DeleteView):
   model = Event
   success_url = '/events/'
 
-def event_to_JSON(event):
-    dict = {}
-    dict[""]
+# def event_to_JSON(event):
+#     dict = {}
+#     dict[""]
 
 def get_JSON(request):
-    events_JSON = Event.objects.all().values('id', 'user', 'name', 'location', 'event_time', 'event_date', 'details', 'lat', 'lng')
+    events_JSON = Event.objects.all().values('id', 'user', 'name', 'location', 'event_time', 'event_date', 'details', 'lat', 'lng', 'event_type')
     return HttpResponse(events_JSON)
 
-def create_JSON(request):
-    pass
+# def create_JSON(request):
+#     pass
 
 
 def signup(request):

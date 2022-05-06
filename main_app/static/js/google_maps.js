@@ -5,7 +5,6 @@ $(document).ready(function() {
   cardList = [...cardList];
   cardList.forEach((card) => {
     let cardId = card.id
-    console.log('poop', cardId)
     card.addEventListener('click', () => {
       console.log(markerBucket[cardId]);
       markerBucket[cardId][1].open({
@@ -54,6 +53,39 @@ function formatInfoWindowContent(markerIngredients) {
 
 }
 
+function getColor(eventType) {
+  // Meet Up
+  // Party
+  // Music
+  // Community
+  // Professional
+  // Social
+  // Sport
+  // Lifestyle
+  // Religious'
+  switch(eventType) {
+    case 'Meet Up':
+      return 'http://maps.google.com/mapfiles/ms/micons/green-dot.png';
+    case 'Party':
+      return 'http://maps.google.com/mapfiles/ms/micons/red-pushpin.png';
+    case 'Music':
+      return 'http://maps.google.com/mapfiles/ms/micons/blue-pushpin.png';
+    case 'Community':
+      return 'http://maps.google.com/mapfiles/kml/pal2/icon2.png';
+    case 'Professional':
+      return 'http://maps.google.com/mapfiles/kml/pal2/icon6.png';
+    case 'Social':
+      return 'http://maps.google.com/mapfiles/kml/pal2/icon27.png';
+    case 'Sport':
+      return 'http://maps.google.com/mapfiles/kml/pal2/icon49.png';
+    case 'Lifestyle':
+      return 'http://maps.google.com/mapfiles/ms/micons/swimming.png';
+    case 'Religious':
+      return 'http://maps.google.com/mapfiles/kml/pal2/icon11.png';
+    
+  }
+}
+
 function initMap(marks) {
 
     const veniceBeach = { lat: 34.003052, lng: -118.483971 };
@@ -67,10 +99,11 @@ function initMap(marks) {
     if(marks) {
       markerList = formatMarkers(marks)
       markerList.forEach(function (markerIngredients) {
-        console.log(markerIngredients)
+        // let markColor = getColor(markerIngredients.event_type);
         const marker = new google.maps.Marker({
           position: {lat: parseFloat(markerIngredients.lat), lng: parseFloat(markerIngredients.lng)},
           map: map,
+          icon: getColor(markerIngredients.event_type),
         });
         
         
@@ -89,6 +122,7 @@ function initMap(marks) {
         const infoWindow = new google.maps.InfoWindow({
           content : `
           <h3> ${ markerIngredients.name }  </h3>
+          <p>Event Type: ${ markerIngredients.event_type }</p>
           <p>location: ${ markerIngredients.location }</p>
           <p>event date: ${ markerIngredients.event_date }</p>
           <p>event time: ${ markerIngredients.event_time }</p>
