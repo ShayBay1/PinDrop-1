@@ -13,7 +13,11 @@ body {
     flex-direction: column;
   }
   h1 {
-    color:rgb(255, 153, 0);
+    color:white;
+    font-size: 130px;
+    font-weight: bold;
+    text-shadow: 3px 8px black;
+
   }
  .page-footer{
    background-color: rgb(250, 235, 215);
@@ -83,3 +87,15 @@ font-size: 3vh;
 .spacer{
   height: 100vh;
 }
+
+
+/* ---------------- Sign up css ------------------- */
+.signupform {
+  color: white
+}
+#label {
+  color: white;
+}
+
+
+/* ---------------- End of sign up css ------------------- */
