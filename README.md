@@ -1,4 +1,4 @@
-    P!N Drop
+    #### P!N Drop
 A way to connect with the world around you!
 
 ### Wireframe:  
@@ -10,26 +10,23 @@ In a world where technology has made it possible to plug in and tune out the wor
 
 photos:
 ![alt text](https://i.imgur.com/hrUIDAD.png)
-<img width="1670" alt="Pindrop UI" src="https://imgur.com/a/zU99YFB">
-<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://imgur.com/a/5smltKW">
-<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://imgur.com/a/9aQKHQw">
-<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://imgur.com/a/Sj90a5x">
+![alt text](https://i.imgur.com/X7MJEpL.png)
+![alt text](https://i.imgur.com/Un2KjrI.png)
+![alt text](https://i.imgur.com/l1gItdE.png)
 
 
 
-
-
-MVP:
+### MVP:
 -Users logs in and see pins on the map. 
 -Click a P!N to see the details!
 -Drop a P!N and share details about an event!
-ICEBOX:
+### ICEBOX:
 -users can search for their desired event via color of pin (catagories include: social event, networking event, sports event, music event ect...)
 -Users can rsvp to an event and when a user clicks a pin they can see whos rvsp'd
 -events will have varying accesability such as public,private, and invite only.
 -users will have Instagram-like profiles so that Users hosting an event can decide if theyll accept an rsp request by viewing a users profile page. 
 
-TECHNOLOGIES USED:
+### TECHNOLOGIES USED:
 P!N Drop is built on the Django framework in Python3 one of the most user friendly full stack coding languages in the world. HTML, and CSS for our user interface, and we are utilising Heroku to deploy this project.
 
 You can check out P!N Drop and connect with this link!:
