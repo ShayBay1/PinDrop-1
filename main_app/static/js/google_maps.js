@@ -1,4 +1,45 @@
 var markerBucket = {};
+var mapStyles = [
+  {
+    "featureType": "landscape.man_made",
+    "stylers": [
+      {
+        "color": "#cacdce"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "stylers": [
+      {
+        "color": "#afc5b6"
+      },
+      {
+        "saturation": -5
+      },
+      {
+        "lightness": -15
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#444f74"
+      }
+    ]
+  }
+]
 
 $(document).ready(function() {
   let cardList = $('.card-content');
@@ -92,7 +133,7 @@ function initMap(marks) {
     // The map, center it on Venice Beach for now, later this will be user's home
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 12,
-      mapId: 'b447797a89d61e12',
+      styles: mapStyles,
       center: veniceBeach,
     });
     // make markers
