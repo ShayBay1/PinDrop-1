@@ -91,6 +91,9 @@ h2 {
    /* background-color: white; */
 
 }
+footer.page-footer {
+    background-color: white;
+}
 
 
 /* ------Header and footer------ */
@@ -117,7 +120,8 @@ h2 {
 
 .right {
     padding-bottom: 10px;
-    color: black;
+    color: white;
+    
 }
 
 .page-footer {
