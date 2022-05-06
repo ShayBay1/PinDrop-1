@@ -2,19 +2,21 @@
 A way to connect with the world around you!
 
 ### Wireframe:  
-<img width="1670" alt="PinDrop" src="https://imgur.com/a/t1jAO8F">
-
+<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://i.imgur.com/26s8Ata.png">
 ### ERD: 
-<img width="1670" alt="PinDrop" src="https://imgur.com/a/mVEfEed">
-
+<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://i.imgur.com/sFo09gm.png">
 
 In a world where technology has made it possible to plug in and tune out the world around us, we are creating a way to tune IN, and CONNECT with the world around us! We know the solution isnt to fight the wave of technology, and we, at team Party P!N, are NOT here to tell you what to do! But we do want to give you a few solid options! from beach parties on the west side, to the best hiking spots in the hills, and even exclusive networking events! You may never know how many oportunities youve passed right by, but with P!N Drop you can see all the opportunities in your area, which is especially helpful when youre not in "your area"! Sign up and try P!NDrop! Find events in your area today! 
 
 photos:
-<img width="1670" alt="PinDrop" src="https://imgur.com/a/zU99YFB">
-<img width="1670" alt="PinDrop" src="https://imgur.com/a/5smltKW">
-<img width="1670" alt="PinDrop" src="https://imgur.com/a/9aQKHQw">
-<img width="1670" alt="PinDrop" src="https://imgur.com/a/Sj90a5x">
+![alt text](https://i.imgur.com/hrUIDAD.png)
+<img width="1670" alt="Pindrop UI" src="https://imgur.com/a/zU99YFB">
+<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://imgur.com/a/5smltKW">
+<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://imgur.com/a/9aQKHQw">
+<img width="1670" alt="Screen Shot 2022-03-25 at 4 11 32 AM" src="https://imgur.com/a/Sj90a5x">
+
+
+
 
 
 MVP:
