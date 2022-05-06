@@ -25,7 +25,8 @@ body {
     font-size: 140px;
     font-weight: bold;
     text-shadow: 3px 13px black;
-    border: 7px solid #ffe083;
+    /* border: 7px solid #ffe083; */
+    text-align: center;
   }
  .page-footer{
    background-color: rgb(250, 235, 215);
@@ -102,7 +103,7 @@ font-size: 3vh;
   color: white;
 }
 .container{
-  display: flex;
+  
   margin: auto;
   padding: 0;
   flex-direction: column;
@@ -153,18 +154,18 @@ label.active {
 
 /* --------event form------------------ */
 form.event-form-square{
-  padding: 10px 10px 30px 20px;
+  padding: 0px 10px 10px 20px;
   background-color: white;
   color:black;
   margin-top: 60px;
   margin-right: 80px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   margin-left: 60px;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 25px;
   /* border: 7px solid black; */
   border: 7px solid #ffe083;
-  height: 100vh;
+  height: 60vh;
 }
 
 /* --------------delete form----------------------- */
