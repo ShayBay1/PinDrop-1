@@ -99,7 +99,7 @@ function initMap(marks) {
         markerBucket[markerIngredients.id] = [marker, infoWindow];
         
   
-        marker.addListener('mouseup', (event) => {
+        marker.addListener('click', (event) => {
           //add onclick behavior to marker 
           if (event.domEvent.which === 1) {
             // open infowindow test....
@@ -109,14 +109,30 @@ function initMap(marks) {
               shouldFocus: false,
             });
           }
+        })
+        let touchStart;
+        marker.addListener('touchstart', (event) => {
+          touchStart = Date.now();
+        })
+
+        marker.addListener('touchend', (event) => {
+          let touchEnd = Date.now();
+          if( mapEl.classList.contains('logged-in')) {
+            if (touchEnd - touchStart > 500) {
+              window.location.href = `/events/${markerIngredients.id}/delete/`
+            }
+          }
+        })
+
+        marker.addListener('mouseup', (event) => {
           if( mapEl.classList.contains('logged-in')) {
             if (event.domEvent.which === 3) {
               // Delete endpoint: 'events/<int:pk>/delete/'
               window.location.href = `/events/${markerIngredients.id}/delete/`
             }
           }
-        })
-      })
+        });
+      });
     }
 
     const mapEl = document.getElementById("map");
