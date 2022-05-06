@@ -1,8 +1,16 @@
 
 .left.brand-logo{
 background-color: rgb(51, 51, 51);
-color: rgb(255, 153, 0);
 }
+.white-logo{
+  color: white;
+  font-size: 30px;
+}
+.red-logo{
+  color: red;
+  font-size: 30px;
+}
+
 .right {
 background-color: rgb(51, 51, 51);
 }
@@ -14,10 +22,10 @@ body {
   }
   h1 {
     color:white;
-    font-size: 130px;
+    font-size: 140px;
     font-weight: bold;
-    text-shadow: 3px 8px black;
-
+    text-shadow: 3px 13px black;
+    border: 7px solid #ffe083;
   }
  .page-footer{
    background-color: rgb(250, 235, 215);
@@ -59,13 +67,7 @@ color: aliceblue;
   width: 100vw;
   height: 100vh;
 }
-.container{
-  display: flex;
-    margin: auto;
-    padding: 0;
-    flex-direction: column;
-    align-items: center;
-}
+
 .card {
   background-color: #ddcebf;
 }
@@ -91,11 +93,60 @@ font-size: 3vh;
 
 /* ---------------- Sign up css ------------------- */
 .signupform {
-  color: white
+  color: whbite;
+}
+.signupform:hover {
+  opacity: 0.9;
 }
 #label {
   color: white;
 }
-
-
+.container{
+  display: flex;
+  margin: auto;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: white; */
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+  background-color: #2980b9;
+  background-image: url("https://images.pexels.com/photos/1134166/pexels-photo-1134166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  /* https://media.istockphoto.com/vectors/seamless-pattern-with-navigation-icons-vector-id1223483183 */
+  
+  
+}
+form.signupform{
+  /* background-color: white; */
+  border: 12px solid black;
+  padding: 20px 40px 60px 30px;
+  background-color: white;
+  color:black;
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  font-size: 25px;
+  border-radius: 25px;
+  border: 7px solid black;
+  /* border: 7px solid #ffe083; */
+}
 /* ---------------- End of sign up css ------------------- */
+form.login-square {
+  /* border: 12px solid #baafa8; */
+  padding: 10px 70px 100px 90px;
+  background-color: white;
+  color:black;
+  margin-top: 60px;
+  margin-right: 80px;
+  margin-bottom: 70px;
+  margin-left: 60px;
+  font-size: 55px;
+  border-radius: 25px;
+  border: 7px solid black;
+  /* border: 7px solid #ffe083; */
+}
+label.active {
+  color: black
+}
