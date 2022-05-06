@@ -92,6 +92,7 @@ function initMap(marks) {
     // The map, center it on Venice Beach for now, later this will be user's home
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 12,
+      mapId: 'b447797a89d61e12',
       center: veniceBeach,
     });
     // make markers
