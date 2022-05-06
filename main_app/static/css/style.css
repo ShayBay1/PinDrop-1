@@ -153,17 +153,18 @@ label.active {
 
 /* --------event form------------------ */
 form.event-form-square{
-  padding: 10px 70px 100px 90px;
+  padding: 10px 10px 30px 20px;
   background-color: white;
   color:black;
   margin-top: 60px;
   margin-right: 80px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   margin-left: 60px;
-  font-size: 55px;
+  font-size: 30px;
   border-radius: 25px;
   /* border: 7px solid black; */
   border: 7px solid #ffe083;
+  height: 100vh;
 }
 
 /* --------------delete form----------------------- */
