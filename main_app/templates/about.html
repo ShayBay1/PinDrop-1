@@ -1,6 +1,89 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1>About Page</h1>
-<hr />
-<p class="aboutp">In a world where technology has made it possible to plug in and tune out the world around us, we here at Party P!N are creating a way to tune IN, and CONNECT with the world around us! We know the solution isnt to fight the wave of technology, and we, at team Party P!N, are NOT here to tell you what to do! But we do want give you a few solid options! from beach parties on the west side, to the best hiking spots in the hills, and even exclusive networking events! You may never know how many oportunities youve passed right by, but with P!N Drop you can see all the opportunities in your area, which is especially helpful when youre not in "your area"! </p>
-{% endblock %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pin Drop About Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link  href="{% static 'css/about.css' %}"rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a56f24906f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <ul>
+              <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Pin Drop</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="/about">About</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}?next=/events"> Logout</a></li>
+                {% else %}
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'login' %}?next=/events">Log In</a></li>
+                {% endif %}
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <section class="section-top">
+        <h1 class="title-about">About Page</h1>
+    
+    </section>
+    
+    <!-- <hr /> -->
+    <div class="image1"></div> 
+    
+    
+<!-- ----------------------------------- middle section ------------------------------------ -->
+
+    <section class="section-middle">
+        <!-- <hr /> -->
+        <p class="aboutp" >  In a world where technology has made it possible to plug in and tune out the world around us, we here at Party P!N are creating a way to tune IN, and CONNECT with the world around us! We know the solution isnt to fight the wave of technology, and we, at team Party P!N, are NOT here to tell you what to do! But we do want give you a few solid options! from beach parties on the west side, to the best hiking spots in the hills, and even exclusive networking events! You may never know how many oportunities youve passed right by, but with P!N Drop you can see all the opportunities in your area, which is especially helpful when youre not in "your area"! </p> 
+        <!-- <hr /> -->
+    </section>
+
+   
+<!-- ----------------------------------- bottom section ------------------------------------ -->
+    <section class="section-bottom">
+        <div class="row">
+            <figure class="column">
+                <div>Brian Baron</div>
+                <img src="https://d.newsweek.com/en/full/1920025/cat-its-mouth-open.jpg?w=1600&h=1600&q=88&f=b7a44663e082b8041129616b6b73328d" alt="" class="circle responsive-img"  style="width:100%" id="column">
+                <figcaption>"Keeping it 55th street with you..."<a href="https://github.com/briabar"><i class="fa-brands fa-github fa-2x" id="icons"></i></a></figcaption>
+            </figure>
+
+            <figure class="column">
+                <h2>Shay Dinneen</h2>
+                <img src="https://3.bp.blogspot.com/-PWh76bHPAYk/WcK7AYAwCEI/AAAAAAABz5E/kGThGaywUTc80vRLwEULRBAmXgWJe_XpgCLcBGAs/s1600/funny-cat-277-01.jpg" alt="" class="circle responsive-img"  style="width:100%" id="column">
+                <figcaption>"Surfs up, brah!"<a href="https://github.com/ShayBay1"><i class="fa-brands fa-github fa-2x" id="icons"></i></a></figcaption>
+            </figure>
+            
+            <figure class="column">
+                <h2>Benjamin Hong</h2>
+                <img src="https://i.pinimg.com/originals/0c/ac/ca/0cacca7976794fb9db0701f49a5acd2c.jpg" alt="" class="circle responsive-img"  style="width:100%" id="column">
+                <figcaption> "Let's eat!"<a href="https://github.com/ohhbenjaminn"><i class="fa-brands fa-github fa-2x" id="icons"></i></a></figcaption>
+            </figure>
+        </div> 
+    </section>
+
+ 
+
+    
+               
+    <footer class="page-footer">
+        <div class="right">All Rights Reserved, &copy; 2022 Pin Drop &nbsp;</div>
+    </footer>                       
+    
+</body>
+    
+</html>

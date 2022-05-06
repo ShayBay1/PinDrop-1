@@ -1,27 +1,36 @@
 body {
-    background-color: #fbfafa;
+    background-color: #3282cb;
 
 }
 h1 {
     text-align: center;
     font-size: 100px;
-    background-color: #e2e2e2;
+    color: #efeded;
+    font-weight: bold;
+    text-shadow: 3px 9px black;
+    background-color: #3282cb;
 }
 
 h2 {
     padding-top: 0%;
     text-align: center;
-    font-size: 20px;
+    font-size: 35px;
     display: flex;
     justify-content: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 3px 4px black;
 }
 
 .image1 {
-    width: 100%;
-    background-image: url(https://files.realpython.com/media/Screenshot_2018-12-09_at_17.58.16.20be0c5d3f1e.png);
+    background-image: url(https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Trends_Hero_Image.max-1000x1000.jpg);
+    /* https://files.realpython.com/media/Screenshot_2018-12-09_at_17.58.16.20be0c5d3f1e.png */
     height: 50vh;
-    background-color: purple;
-    background-position: center;
+    width: 100%;
+    /* background-color: purple; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .aboutp {
@@ -34,15 +43,15 @@ h2 {
 }
 
 /* Three image containers (use 25% for four, and 50% for two, etc) */
-.row {
-    font-size: 30px;
+/* .row {
+    font-size: 20px;
     text-indent: 50px;
     padding-top: 50px;
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px;
     text-align: center;
-}
+} */
 
 .column {
     float: left;
@@ -57,26 +66,29 @@ h2 {
 }
 .row {
     display: flex;
+    align-items: flex-end
 }
 .column {
     flex: 33.33%;
     padding: 5px;
+    font-size: 20px;
 }
 
 .section-bottom {
     text-align: center;
     display: flex;
     justify-content: center;
+    background-color: #3282cb;
 }
 .section-top {
-    background-color: #e2e2e2;
+    background-color: #dddbdb;
 }
 
 .section-middle {
     background-color: #e2e2e2;
 }
 .section-bottom {
-   background-color: white;
+   /* background-color: white; */
 
 }
 
@@ -102,4 +114,14 @@ h2 {
 .page-footer {
     background-color:#e2e2e2;
     font-weight: bold;
+}
+
+#icons {
+    color: white;
+    text-shadow: 3px 6px black;
+    margin:0 25px
+}
+
+.circle {
+    border: 5px solid white;
 }
