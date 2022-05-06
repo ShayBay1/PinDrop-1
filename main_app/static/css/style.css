@@ -93,7 +93,7 @@ font-size: 3vh;
 
 /* ---------------- Sign up css ------------------- */
 .signupform {
-  color: whbite;
+  color: white;
 }
 .signupform:hover {
   opacity: 0.9;
@@ -111,11 +111,11 @@ font-size: 3vh;
   width: 100%;
   padding-bottom: 100%;
   position: relative;
-  background-color: #2980b9;
+  /* background-color: #2980b9; */
   background-image: url("https://images.pexels.com/photos/1134166/pexels-photo-1134166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   /* https://media.istockphoto.com/vectors/seamless-pattern-with-navigation-icons-vector-id1223483183 */
-  
-  
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 form.signupform{
   /* background-color: white; */

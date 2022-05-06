@@ -91,9 +91,6 @@ h2 {
    /* background-color: white; */
 
 }
-footer.page-footer {
-    background-color: white;
-}
 
 
 /* ------Header and footer------ */
@@ -118,14 +115,18 @@ footer.page-footer {
   }
 
 
-.right {
-    padding-bottom: 10px;
+.bottomright {
+    padding-bottom: 20px;
+    font-size: 15px;
     color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(51, 51, 51);;
     
 }
 
 .page-footer {
-    background-color:#e2e2e2;
+    background-color:#2980b9;
     font-weight: bold;
 }
 
