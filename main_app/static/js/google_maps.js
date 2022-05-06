@@ -111,15 +111,15 @@ function initMap(marks) {
           }
         })
         let touchStart;
-        marker.addListener('touchstart', (event) => {
-          touchStart = setTimeout(() => {
+        marker.addListener('touchstart', function(event) {
+          touchStart = setTimeout(function() {
             if( mapEl.classList.contains('logged-in')) {
               window.location.href = `/events/${markerIngredients.id}/delete/`
             }
           }, 500);
         })
 
-        marker.addListener('touchend', (event) => {
+        marker.addListener('touchend', function(event) {
           clearTimeout(touchStart);
         });
 
